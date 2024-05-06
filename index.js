@@ -1,4 +1,4 @@
-import Main from './src/component/Main'
+import Main from './src/components/Main.vue'
 import _Vue from 'vue'
 
 Main.install = Vue => {
