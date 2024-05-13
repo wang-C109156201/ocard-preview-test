@@ -3,21 +3,21 @@
     <img :src="SvgKeyboard" alt="keyboard image">
     <div class="menu-text-box">
       <div class="menu-text-style">{{ MenuText }}</div>
-      <img :src="ImgTriangle" alt="triangle image" class="triangle">
+      <img :src="SvgTriangle" alt="triangle image" class="triangle">
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import SvgKeyboard from '../assets/keyboard.svg';
-import ImgTriangle from '../assets/triangle.svg';
+import SvgTriangle from '../assets/triangle.svg';
 
 export default {
   data() {
     return {
       initData: 'hello 你好',
       SvgKeyboard: SvgKeyboard,
-      ImgTriangle:ImgTriangle
+      SvgTriangle:SvgTriangle
     }
   },
   props: {
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .bottom-menu {
   width: 300px;
   height: 44px;
