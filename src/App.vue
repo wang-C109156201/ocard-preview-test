@@ -1,8 +1,15 @@
 <template>
   <div id="app">
-    <div class="linePreview">
+    <preview
+      platform = "'IOS' || 'ANDROID' || 'LINE' || 'WHATSAPP' || 'MESSENGER'"
+      messages[] = "{
+        type,
+        content{...},
+      }"
+    />
+    <div v-if="platform === 'LINE'" class="linePreview">
       <div class="bg">
-        <Main :propData='initData'/>
+        <Text :propData='initData'/>
       </div>
       <div class="buttonMenu">
         <img :src="svg" alt="keyboard image">
@@ -17,20 +24,21 @@
 </template>
 
 <script>
-import Main from './components/Main.vue'
+import Text from './components/Text.vue'
 import svg from './assets/keyboard.svg';
 import triangle from './assets/triangle.svg'
 
 export default {
   data(){
     return {
+      platform: 'LINE',
       initData: 'hello 你好',
       svg: svg,
       triangle: triangle
     }
   },
   components:{
-    Main
+    Text
   },
   props: {
     MenuText: {
