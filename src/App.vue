@@ -9,7 +9,7 @@
     />
     <div v-if="platform === 'LINE'" class="linePreview">
       <div class="bg">
-        <Text :propData='initData'/>
+        <message :propData='initData'/>
       </div>
       <div class="buttonMenu">
         <img :src="svg" alt="keyboard image">
@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Text from './components/Text.vue'
+import message from './components/Message.vue'
 import svg from './assets/keyboard.svg';
 import triangle from './assets/triangle.svg'
 
