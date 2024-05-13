@@ -1,6 +1,35 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div>{{ propData }}</div>
+  <div>{{ propData }}
+  
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+  <p>我是默认值</p>
+
+  </div>
+ 
 </template>
 
 <script lang="ts">
