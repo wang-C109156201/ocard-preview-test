@@ -2,8 +2,7 @@
   <div id="app">
     <div v-if="platform === 'Line'" class="line-preview">
       <div class="background-color">
-        <Message v-if="type === 'message'" :propData='initData' /> 
-        <!-- 這裡接data的地方待修 -->
+        <Message v-if="type === 'message'" :lineMessage='initData' /> 
       </div>
       <BottomMenu></BottomMenu>
     </div>

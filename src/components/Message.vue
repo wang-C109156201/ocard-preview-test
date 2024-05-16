@@ -27,7 +27,7 @@ export default {
   props: {
     lineMessage: {
       type: String,
-      default: '77777777777777777777777777777777777777777777777777777777777777777777777'
+      default: '嗨～專屬優惠送給你！會員獨享到店到店滿 200 元就送 noii noii 貼紙！💛'
     }
   }
 }
@@ -48,9 +48,15 @@ export default {
   min-height: 30px;
   border-radius: 18px;
   margin-left: -8px;
-  max-width: 212px;
+  max-width: 210px;
   word-wrap: break-word;
-  padding: 10px;
+  padding: 0px 10px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height:16px;
+  color: #606266;
+  align-content: center;
 }
 .vector-size{
   width:8.27px;
