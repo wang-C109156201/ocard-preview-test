@@ -27,7 +27,7 @@ export default {
   props: {
     lineMessage: {
       type: String,
-      default: '嗨～專屬優惠送給你！會員獨享到店到店滿 200 元就送 noii noii 貼紙！💛'
+      default: '巴拉巴拉'
     }
   }
 }

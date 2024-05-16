@@ -2,7 +2,8 @@
   <div id="app">
     <div v-if="platform === 'Line'" class="line-preview">
       <div class="background-color">
-        <Message v-if="type === 'message'" :lineMessage='initData' /> 
+        <Message v-if="type === 'message'" :lineMessage='initMessage' /> 
+        <GiftRoll v-if="type === 'giftRoll'" :lineGiftRoll='initGiftRoll' /> 
       </div>
       <BottomMenu></BottomMenu>
     </div>
@@ -12,16 +13,19 @@
 
 <script lang="ts">
 import Message from './components/Message.vue';
-import BottomMenu from '@/components/BottomMenu.vue';
+import BottomMenu from './components/BottomMenu.vue';
+import GiftRoll from './components/GiftRoll.vue';
 
 export default {
   components: {
     BottomMenu,
-    Message
+    Message,
+    GiftRoll
   },
   data() {
     return {
-      initData: 'hello 你好'
+      initMessage: 'hello 你好',
+      initGiftRoll: 'jjj'
     }
   },
   props: {
@@ -31,7 +35,7 @@ export default {
     },
     type:{
       type:String,
-      default: 'message'
+      default: 'giftRoll'
     }
   }
 }

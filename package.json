@@ -2,7 +2,7 @@
   "name": "line-preview",
   "version": "0.1.0",
   "private": true,
-  "main": "dist/ocard-preview-page.js", 
+  "main": "dist/ocard-preview-page.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name ocard-preview-page package.json",
