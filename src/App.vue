@@ -60,5 +60,16 @@ export default {
   overflow: auto;
   box-sizing: border-box;
 }
+.background-color::-webkit-scrollbar-thumb  {
+  background: #D9D9D9;
+  border-radius: 2px;
+  opacity: 0.4; 
+}
+
+.background-color::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+  margin: 20px;
+}
 
 </style>

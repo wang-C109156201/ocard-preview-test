@@ -1,31 +1,33 @@
 <template>
-  <div class="dialog-box">
-    <img :src="Avatar" alt="Avatar Img">
-    <div class="giftRoll-box">
-      <img :src="Vector" class="vector-size" alt="Vector Img">
-      <div class="giftRoll">
-        <p class="gift-title">您收到了 {{ giftData.quantity }} 張「{{ giftData.title }}」</p>
-        <img :src="giftData.image" alt="giftCard">
-        <p class="title">{{ giftData.title }}</p>
-        <div class="gift-content">
-          <div v-if="giftDataShow === false">
-            <h6>到期日期</h6>
-            <div class="discount-content">
-              <h6>優惠內容</h6>
-              <img src="../assets/giftcontent.png" alt="giftcontent">
+  <div>
+    <Message />
+    <!-- 這裡要怎麼這裡要怎麼樣的type傳給我呢 布林值控制顯示嗎? -->
+    <div class="dialog-box">
+      <img :src="Avatar" alt="Avatar Img">
+      <div class="giftRoll-box">
+        <div class="giftRoll">
+          <p>您收到了 {{ giftData.quantity }} 張「{{ giftData.title }}」</p>
+          <img :src="giftData.image" alt="giftCard">
+          <p class="title">{{ giftData.title }}</p>
+          <div class="gift-content">
+            <div v-if="giftDataShow === false">
+              <h6>到期日期</h6>
+              <div class="discount-content">
+                <h6>優惠內容</h6>
+                <img src="../assets/giftcontent.png" alt="giftcontent">
+              </div>
             </div>
-          </div>
-          <div v-else>
-            <h6>{{ giftData.date }}到期</h6>
-            <div class="discount-content">
-              <h6>優惠內容</h6>
+            <div v-else>
+              <h6>{{ giftData.date }}到期</h6>
+              <div class="discount-content">
+                <h6>優惠內容</h6>
               <div class="content-text">{{ giftData.discountContent }}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
   </div>
 </template>
   
@@ -33,12 +35,15 @@
 <script lang="ts">
 import Vue from 'vue';
 import SvgAvatar from '../assets/avatar.svg';
-import SvgVector from '../assets/vector.svg';
+import Message from './Message.vue';
+
 export default Vue.extend ({
+  components: {
+    Message
+  },
   data() {
     return {
-      Avatar: SvgAvatar,
-      Vector: SvgVector
+      Avatar: SvgAvatar
     }
   },
   props: {
@@ -56,7 +61,7 @@ export default Vue.extend ({
     },
     giftDataShow:{
       type: Boolean,
-      default: false
+      default: true
     },
     giftData: {
       type: Object,
@@ -89,15 +94,10 @@ export default Vue.extend ({
   height:356px;
   background-color: white;
   border-radius: 18px;
-  margin-left: -8px;
   word-wrap: break-word;
 }
 .gift-content{
   font-family: "Noto Sans TC", sans-serif;
-}
-.vector-size{
-  width:8.27px;
-  height:10.09px;
 }
 p{
   font-family: "Noto Sans TC", sans-serif;
